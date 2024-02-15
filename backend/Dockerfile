@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 3001
 
 # Command to run the backend server
-CMD ["python", "index.py"]
+CMD ["python", "main.py"]
