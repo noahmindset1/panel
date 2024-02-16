@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Hosting Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Bot Hosting Panel</h2>
+            <ul>
+                <li class="active"><a href="#" onclick="showSection('terminal')">Terminal</a></li>
+                <li><a href="#" onclick="showSection('file-manager')">File Manager</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div id="terminal" class="active">
+                <h3>Terminal</h3>
+                <textarea class="terminal" id="terminal-output" readonly>$ Welcome to Bot Hosting Panel terminal...</textarea>
+                <div class="actions">
+                    <button id="run-button">Run</button>
+                    <button id="stop-button">Stop</button>
+                </div>
+            </div>
+
+            <div id="file-manager">
+                <h3>File Manager</h3>
+                <input type="file" id="file-input">
+                <ul id="file-list">
+                    <!-- File manager content will be populated dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
